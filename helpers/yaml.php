@@ -1,5 +1,9 @@
 <?php
 
+namespace packager\helpers;
+
+use packager\libs\Spyc;
+
 require dirname(__FILE__) . "/../libs/spyc.php";
 
 class YAML {

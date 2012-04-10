@@ -1,4 +1,7 @@
 <?php
+
+namespace packager\libs;
+
 /**
    * Spyc -- A Simple PHP YAML Class
    * @version 0.5

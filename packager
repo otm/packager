@@ -1,6 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+namespace packager;
+
+use packager\helpers\YAML;
+use Exception;
+
 require dirname(__FILE__) . '/packager.php';
 
 $executable = array_shift($argv);

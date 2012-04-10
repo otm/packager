@@ -1,5 +1,10 @@
 <?php
 
+namespace packager;
+
+use packager\helpers\YAML;
+use Exception;
+
 require dirname(__FILE__) . "/helpers/yaml.php";
 require dirname(__FILE__) . "/helpers/array.php";
 
@@ -41,6 +46,10 @@ Class Packager {
 			$package_path = $pathinfo['dirname'] . '/';
 			$manifest_path = $package_path . $pathinfo['basename'];
 			$manifest_format = $pathinfo['extension'];
+		}
+		else{
+			$pwd = getcwd();
+			throw new Exception("Unknown path `${path}`\nCurrent folder is `${pwd}`");
 		}
 		
 		if ($manifest_format == 'json') $manifest = json_decode(file_get_contents($manifest_path), true);
